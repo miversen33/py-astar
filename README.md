@@ -1,4 +1,4 @@
-# Python Based A* Pathfinding implementation
+# Python Based A* Pathfinding Implementation
 For more details on the [A* algorithm](https://wikipedia.org/wiki/A*_search_algorithm)
 
 ## definition(start_node, goal_node, cost_method, heuristic_method, neighbor_method, depth_limit=None)
