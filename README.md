@@ -18,8 +18,7 @@ For more details on the [A* algorithm](https://wikipedia.org/wiki/A*_search_algo
  
  - heuristic_method
     - definition(node1, node2)
-    - #### Expected Return: a numerical representation of the "benefit" of moving from node1 to node2. This will be where most "logic" happens
-        in a*. The general usage of this will be as follows
+    - #### Expected Return: a numerical representation of the "benefit" of moving from node1 to node2. This will be where most "logic" happens in a*. The general usage of this will be as follows
         - heuristic_method(neighbor_node, goal_node)
  
  - neighbor_method
