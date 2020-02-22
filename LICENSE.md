@@ -1,7 +1,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2020 Mike
+Copyright (c) 2020 Bladebeat Productions
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
