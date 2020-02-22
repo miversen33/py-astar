@@ -10,6 +10,13 @@ def astar(start_node, goal_node, cost_method, heuristic_method, neighbor_method,
         return path
 
     current_depth = -1
+    # We are doing a bit of "clever" stuff here. Since we can't be sure the start and 
+    # goal nodes are actually hashable (looking at you python dictionaries...), we 
+    # assign it a random number and use that. The chances of us getting a repeating 
+    # random number are very slim, even on larger maps. If this does become an issue we
+    # can switch from random.random() to uuids which have an even less chance of repeating.
+    # import uuid
+    # hash = uuid.uuid4()
     start_hash = random.random()
     goal_hash  = random.random()
     hash_set = dict()
@@ -39,6 +46,8 @@ def astar(start_node, goal_node, cost_method, heuristic_method, neighbor_method,
         open_set.remove(current_hash)
         for neighbor in neighbor_method(hash_set[current_hash]):
             neighbor_hash = None
+            # The only hangup here would be if you are doing some fuckery with __eq__ and not allowing neighbor == neighbor.
+            # And what kind of animal would do that?
             if neighbor not in hash_set.values():
                 neighbor_hash = random.random()
                 hash_set[neighbor_hash] = neighbor
